@@ -1,0 +1,44 @@
+:root {
+  --scale: 100vw / #{$sw-desktop--large};
+
+  @include desktop--large {
+    --scale: 100vw / #{$sw-desktop--large};
+  }
+
+  @include desktop {
+    --scale: 100vw / #{$sw-desktop};
+  }
+
+  @include desktop--small {
+    --scale: 100vw / #{$sw-desktop};
+  }
+
+  @include laptop {
+    --scale: 100vw / #{$sw-desktop};
+  }
+
+  @include tablet {
+    --scale: 100vw / #{$sw-desktop};
+  }
+
+  @include mobile {
+    --scale: 100vw / #{$sw-mobile};
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 0vw;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
