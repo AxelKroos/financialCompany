@@ -109,7 +109,7 @@ export default {
 
       &Text {
         &--title {
-          font-size: scaling(50);
+          font-size: scaling(30);
           line-height: scaling(42);
         }
 
