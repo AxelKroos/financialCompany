@@ -22,7 +22,7 @@
   }
 
   @include mobile {
-    --scale: 100vw / #{$sw-mobile};
+    --scale: 100vw / #{$sw-tablet};
   }
 }
 
@@ -30,7 +30,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  min-height: 0vw;
 }
 
 html {

@@ -63,7 +63,7 @@ export default {
 
     .prev,
     .next {
-      fill: $c-white;
+      fill: $c-white-100;
       cursor: pointer;
       transition: opacity 0.2s ease;
 

@@ -20,5 +20,6 @@ export default {
 <style scoped lang="scss">
 .Home {
   color: white;
+  height: 10000px;
 }
 </style>
