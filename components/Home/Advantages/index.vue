@@ -93,8 +93,29 @@ export default {
         line-height: scaling(25);
         font-weight: 400;
       }
+    }
+  }
 
-      &--text {
+  @include mobile {
+    padding: 0;
+
+    &-wrapper {
+      gap: scaling(40);
+    }
+
+    &-item {
+      flex-direction: column;
+      gap: scaling(18);
+
+      &Text {
+        &--title {
+          font-size: scaling(50);
+          line-height: scaling(42);
+        }
+
+        &--text {
+          font-weight: 300;
+        }
       }
     }
   }
