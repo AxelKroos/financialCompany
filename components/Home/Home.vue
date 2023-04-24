@@ -3,6 +3,7 @@
     <Slider />
     <Advantages />
     <Directions />
+    <AboutCompany />
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 import Slider from "./Slider";
 import Advantages from "./Advantages";
 import Directions from "./Directions";
+import AboutCompany from './AboutCompany';
 
 export default {
   components: {
     Slider,
     Advantages,
-    Directions
+    Directions,
+    AboutCompany
   },
 };
 </script>
