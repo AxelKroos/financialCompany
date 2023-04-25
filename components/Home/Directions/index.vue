@@ -93,9 +93,14 @@ export default {
           display: flex;
           gap: 15px;
           margin-top: scaling(18);
+          transition: background-color 0.4s ease;
 
           &::after {
             content: "→";
+          }
+
+          &:hover {
+            background-color: $c-blue-30;
           }
         }
       }

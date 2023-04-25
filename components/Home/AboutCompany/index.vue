@@ -44,7 +44,7 @@ export default {
   padding: scaling(80) 0;
 
   &-wrapper {
-    max-width: 1170px;
+    max-width: $w-1170;
     margin: 0 auto;
   }
 
@@ -125,9 +125,14 @@ export default {
         display: flex;
         gap: 15px;
         margin-top: scaling(30);
+        transition: background-color 0.4s ease;
 
         &::after {
           content: "→";
+        }
+
+        &:hover {
+          background-color: $c-blue-30;
         }
       }
     }
