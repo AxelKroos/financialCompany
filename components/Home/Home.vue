@@ -5,6 +5,7 @@
     <Directions />
     <AboutCompany />
     <Strip />
+    <Services />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import Advantages from "./Advantages";
 import Directions from "./Directions";
 import AboutCompany from "./AboutCompany";
 import Strip from "./Strip";
+import Services from "./Services";
 
 export default {
   components: {
@@ -22,6 +24,7 @@ export default {
     Directions,
     AboutCompany,
     Strip,
+    Services,
   },
 };
 </script>
