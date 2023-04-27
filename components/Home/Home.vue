@@ -6,6 +6,8 @@
     <AboutCompany />
     <Strip />
     <Services />
+    <Parallax />
+    <Causes />
   </div>
 </template>
 
@@ -16,6 +18,8 @@ import Directions from "./Directions";
 import AboutCompany from "./AboutCompany";
 import Strip from "./Strip";
 import Services from "./Services";
+import Parallax from './Parallax';
+import Causes from './Causes';
 
 export default {
   components: {
@@ -25,6 +29,8 @@ export default {
     AboutCompany,
     Strip,
     Services,
+    Parallax,
+    Causes,
   },
 };
 </script>
