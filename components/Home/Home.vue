@@ -45,6 +45,5 @@ export default {
 <style scoped lang="scss">
 .Home {
   color: $c-white-100;
-  height: 10000px;
 }
 </style>

@@ -3,6 +3,8 @@
     <Header />
     <Menu />
     <Nuxt />
+    <ButtonToTop />
+    <Footer />
   </div>
 </template>
 

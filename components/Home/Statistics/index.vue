@@ -107,7 +107,15 @@ export default {
     }
   }
 
-  @media (max-width: ($bp-tablet - 1)) {
+  @media (max-width: ($bp-laptop - 1)) {
+    &-wrapper {
+      flex-direction: column;
+    }
+
+    &-block {
+      width: 100%;
+      margin: 0;
+    }
   }
 }
 </style>
