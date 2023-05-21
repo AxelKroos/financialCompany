@@ -1,5 +1,5 @@
 <template>
-  <div class="Strip" :class="isFirst ? 'isLast' : ''">
+  <div class="Strip" :class="isLast ? 'isLast' : ''">
     <div class="Strip-wrapper">
       <div class="Strip-info">
         <h3>{{ title }}</h3>
@@ -38,6 +38,11 @@ export default {
     background-size: cover;
     background-position: center;
     color: $c-white-100;
+
+    .Strip-button {
+      border: 1px solid;
+      border-color: #fbd5a9;
+    }
   }
 
   &-wrapper {

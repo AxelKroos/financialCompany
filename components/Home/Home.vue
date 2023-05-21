@@ -8,6 +8,9 @@
     <Services />
     <Parallax />
     <Causes />
+    <Strip :isLast="true" />
+    <ServiceDesc />
+    <Statistics />
   </div>
 </template>
 
@@ -20,6 +23,8 @@ import Strip from "./Strip";
 import Services from "./Services";
 import Parallax from './Parallax';
 import Causes from './Causes';
+import ServiceDesc from './ServiceDesc';
+import Statistics from './Statistics';
 
 export default {
   components: {
@@ -31,6 +36,8 @@ export default {
     Services,
     Parallax,
     Causes,
+    ServiceDesc,
+    Statistics,
   },
 };
 </script>
