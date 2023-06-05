@@ -35,4 +35,7 @@ export default {
   styleResources: {
     scss: ["@/assets/scss/constants.scss", "@/assets/scss/mixins.scss"],
   },
+
+  target: 'static',
+  ssr: false,
 };
