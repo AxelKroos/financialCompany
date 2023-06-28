@@ -1,7 +1,12 @@
 <template>
-  <div class="Home">
+  <div class="Home" id="home">
     <Slider />
-    <Advantages />
+    <DefaultBlock :text="'О компании'" :anchor="'company'"/>
+    <DefaultBlock :text="'Банковские гарантии'" :anchor="'guarantees'"/>
+    <DefaultBlock :text="'Кредиты'" :anchor="'credits'"/>
+    <DefaultBlock :text="'Наши проекты'" :anchor="'projects'"/>
+    <DefaultBlock :text="'Контакты'" :anchor="'contacts'"/>
+    <!-- <Advantages />
     <Directions />
     <AboutCompany />
     <Strip />
@@ -10,34 +15,36 @@
     <Causes />
     <Strip :isLast="true" />
     <ServiceDesc />
-    <Statistics />
+    <Statistics /> -->
   </div>
 </template>
 
 <script>
 import Slider from "./Slider";
-import Advantages from "./Advantages";
-import Directions from "./Directions";
-import AboutCompany from "./AboutCompany";
-import Strip from "./Strip";
-import Services from "./Services";
-import Parallax from './Parallax';
-import Causes from './Causes';
-import ServiceDesc from './ServiceDesc';
-import Statistics from './Statistics';
+import DefaultBlock from "./DefaultBlock";
+// import Advantages from "./Advantages";
+// import Directions from "./Directions";
+// import AboutCompany from "./AboutCompany";
+// import Strip from "./Strip";
+// import Services from "./Services";
+// import Parallax from "./Parallax";
+// import Causes from "./Causes";
+// import ServiceDesc from "./ServiceDesc";
+// import Statistics from "./Statistics";
 
 export default {
   components: {
     Slider,
-    Advantages,
-    Directions,
-    AboutCompany,
-    Strip,
-    Services,
-    Parallax,
-    Causes,
-    ServiceDesc,
-    Statistics,
+    DefaultBlock,
+    // Advantages,
+    // Directions,
+    // AboutCompany,
+    // Strip,
+    // Services,
+    // Parallax,
+    // Causes,
+    // ServiceDesc,
+    // Statistics,
   },
 };
 </script>

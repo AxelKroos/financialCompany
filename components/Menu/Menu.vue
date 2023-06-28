@@ -6,14 +6,14 @@
 
     <div class="Menu-pages">
       <div class="Menu-pages--desktop">
-        <NuxtLink
+        <div
           class="Menu-pages--desktopItem"
           v-for="(page, i) in pages"
           :key="`desktop_item-${i}`"
-          :to="page.path"
+          @click="scrollToAnchor(`#${page.anchor}`)"
         >
           {{ page.name }}
-        </NuxtLink>
+        </div>
       </div>
 
       <div class="Menu-pages--mobile">
@@ -31,31 +31,33 @@
 
     <div class="Menu-listMobile">
       <div class="wrapper" :class="isOpenMobile ? 'isActive' : ''">
-        <NuxtLink
+        <div
           class="Menu-listMobile--item"
           v-for="(page, i) in pages"
           :key="`mobile_item-${i}`"
-          :to="page.path"
+          @click="scrollToAnchor(`#${page.anchor}`)"
         >
           {{ page.name }}
-        </NuxtLink>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import VueScrollTo from "vue-scrollto";
+
 export default {
   data() {
     return {
       isOpenMobile: false,
       pages: [
-        { name: "ГЛАВНАЯ", path: "/" },
-        { name: "О КОМПАНИИ", path: "/about" },
-        { name: "ПРОДУКТЫ", path: "/about" },
-        { name: "АНАЛИТИКА", path: "/about" },
-        { name: "КОРПОРАТИВНЫМ КЛИЕНТАМ", path: "/about" },
-        { name: "КОНТАКТЫ", path: "/about" },
+        { name: "ГЛАВНАЯ", anchor: "home" },
+        { name: "О КОМПАНИИ", anchor: "company" },
+        { name: "БАНКОВСКИЕ ГАРАНТИИ", anchor: "guarantees" },
+        { name: "КРЕДИТЫ", anchor: "credits" },
+        { name: "НАШИ ПРОЕКТЫ", anchor: "projects" },
+        { name: "КОНТАКТЫ", anchor: "contacts" },
       ],
     };
   },
@@ -64,6 +66,10 @@ export default {
     toggleMenu() {
       this.isOpenMobile = !this.isOpenMobile;
     },
+
+    scrollToAnchor(anchor) {
+      VueScrollTo.scrollTo(anchor, 1500);
+    }
   },
 };
 </script>
@@ -147,7 +153,7 @@ export default {
     top: 100%;
     width: 100%;
     height: max-content;
-    transition: height .5s ease;
+    transition: height 0.5s ease;
     display: none;
 
     .wrapper {
