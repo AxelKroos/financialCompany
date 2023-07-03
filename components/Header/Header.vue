@@ -2,7 +2,6 @@
   <div class="Header">
     <div class="Header-content">
       <HeaderContacts />
-      <HeaderLinks />
     </div>
   </div>
 </template>
