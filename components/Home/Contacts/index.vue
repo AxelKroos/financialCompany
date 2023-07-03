@@ -53,9 +53,7 @@
 
         <div class="Contacts-info--textItem">
           Телефон:
-          <div class="Contacts-info--textItemSmall">
-            +7(499) 755-62-75 , 8 800 500 21 15 (звонок бесплатный)
-          </div>
+          <div class="Contacts-info--textItemSmall">+7(499) 755-62-75</div>
         </div>
 
         <div class="Contacts-info--textItem">
