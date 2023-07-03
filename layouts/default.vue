@@ -4,7 +4,7 @@
     <Menu />
     <Nuxt />
     <ButtonToTop />
-    <Footer />
+    <!-- <Footer /> -->
   </div>
 </template>
 

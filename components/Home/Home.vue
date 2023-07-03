@@ -5,7 +5,7 @@
     <DefaultBlock :text="'Банковские гарантии'" :anchor="'guarantees'"/>
     <DefaultBlock :text="'Кредиты'" :anchor="'credits'"/>
     <DefaultBlock :text="'Наши проекты'" :anchor="'projects'"/>
-    <DefaultBlock :text="'Контакты'" :anchor="'contacts'"/>
+    <Contacts :anchor="'contacts'"/>
     <!-- <Advantages />
     <Directions />
     <AboutCompany />
@@ -31,6 +31,7 @@ import AboutCompany from "./AboutCompany";
 // import Causes from "./Causes";
 // import ServiceDesc from "./ServiceDesc";
 // import Statistics from "./Statistics";
+import Contacts from "./Contacts";
 
 export default {
   components: {
@@ -45,6 +46,7 @@ export default {
     // Causes,
     // ServiceDesc,
     // Statistics,
+    Contacts
   },
 };
 </script>
