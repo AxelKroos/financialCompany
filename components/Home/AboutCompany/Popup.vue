@@ -6,7 +6,7 @@
       <div @click="inc" class="Popup-images--arrow"><Arrow /></div>
     </div>
 
-    <div class="Popup-arrows">
+    <div class="Popup-arrows" @click="(e) => e.stopPropagation()">
       <div @click="dec" class="prev"><Arrow /></div>
       <div @click="inc"><Arrow /></div>
     </div>
