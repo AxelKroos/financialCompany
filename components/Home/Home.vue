@@ -1,7 +1,7 @@
 <template>
   <div class="Home" id="home">
     <Slider />
-    <DefaultBlock :text="'О компании'" :anchor="'company'"/>
+    <AboutCompany :anchor="'company'"/>
     <DefaultBlock :text="'Банковские гарантии'" :anchor="'guarantees'"/>
     <DefaultBlock :text="'Кредиты'" :anchor="'credits'"/>
     <DefaultBlock :text="'Наши проекты'" :anchor="'projects'"/>
@@ -24,7 +24,7 @@ import Slider from "./Slider";
 import DefaultBlock from "./DefaultBlock";
 // import Advantages from "./Advantages";
 // import Directions from "./Directions";
-// import AboutCompany from "./AboutCompany";
+import AboutCompany from "./AboutCompany";
 // import Strip from "./Strip";
 // import Services from "./Services";
 // import Parallax from "./Parallax";
@@ -38,7 +38,7 @@ export default {
     DefaultBlock,
     // Advantages,
     // Directions,
-    // AboutCompany,
+    AboutCompany,
     // Strip,
     // Services,
     // Parallax,

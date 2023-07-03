@@ -1,5 +1,5 @@
 <template>
-  <div class="AboutCompany">
+  <div class="AboutCompany" :id="anchor">
     <div class="AboutCompany-wrapper">
       <div class="AboutCompany-title">
         <h3>{{ title }}</h3>
@@ -13,25 +13,48 @@
         <div class="AboutCompany-content--item">
           <h4>{{ content.title }}</h4>
           <p>{{ content.text }}</p>
-          <NuxtLink class="link" :to="'/'"> Узнать подробнее </NuxtLink>
+          <div class="link" @click="clickPopup">Узнать подробнее</div>
         </div>
       </div>
     </div>
+
+    <Popup v-if="isOpenPopup" :clickPopup="clickPopup" />
   </div>
 </template>
 
 <script>
+import Popup from "./Popup.vue";
+
 export default {
+  props: {
+    anchor: {
+      type: String,
+      required: true,
+    },
+  },
+
+  components: {
+    Popup,
+  },
+
   data() {
     return {
       title: "О КОМПАНИИ",
-      subtitle: "ООО «Финансовая компания РусФин» - динамично развивающаяся компания. <br /> Учреждена в 2012 году топ-менеджерами банков и крупнейшего ритейлера РФ.",
+      subtitle:
+        "ООО «Финансовая компания РусФин» - динамично развивающаяся компания. <br /> Учреждена в 2012 году топ-менеджерами банков и крупнейшего ритейлера РФ.",
       content: {
         title: "НАША ГАРАНТИЯ",
         text: "Клиентами нашей компании «Русфин» становятся как фирмы малого бизнеса, так и крупные организации, имеющие филиалы по всей стране. Поверив в нас однажды, наши Клиенты обращаются к нам на постоянной основе и рекомендуют своим партнерам как проверенную и надежную компанию, помогающую срочно получить банковскую гарантию по госконтракту, банковскую таможенную гарантию, оказывающую услуги тендерного кредитования.",
       },
+      isOpenPopup: false
     };
   },
+
+  methods: {
+    clickPopup() {
+      this.isOpenPopup = !this.isOpenPopup
+    }
+  }
 };
 </script>
 
@@ -126,6 +149,7 @@ export default {
         gap: 15px;
         margin-top: scaling(30);
         transition: background-color 0.4s ease;
+        cursor: pointer;
 
         &::after {
           content: "→";
